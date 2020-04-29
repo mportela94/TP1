@@ -32,28 +32,28 @@ public class Empresa {
         return nombreEmpresa;
     }
 
-    public void setEmpleadosDeObra(List<Empleados> empleadosDeObra){
+    public void setEmpleados(List<Empleados> empleadosDeObra){
         this.listadoDeEmpleados= empleadosDeObra;
     }
 
-    public List getEmpleadosDeObra(){
+    public List getEmpleados(){
         return listadoDeEmpleados;
     }
 
-    public void setListadoDeObras(List<Obras> listadoDeObras){
+    public void setObras(List<Obras> listadoDeObras){
         this.listadoDeObras=listadoDeObras;
     }
 
-    public List getListadoDeObras (){
+    public List getObras(){
         return listadoDeObras;
     }
 
-    public String agregarEmpleado(Empleados unEmpleado) {
+    public String agregarEmpleado(Empleados unEmpleado) {   //agrega empleado a la lista de Empleados de la Empresa
         listadoDeEmpleados.add(unEmpleado);
         return ("\nCarga exitosa.");
     }
 
-    public String agregarObra(Obras unaObra){
+    public String agregarObra(Obras unaObra){   //agrega una obra a la lista de Obras de la Empresa
         listadoDeObras.add(unaObra);
         return ("\nCarga exitosa.");
     }

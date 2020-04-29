@@ -1,17 +1,11 @@
 package com.company;
 
 import com.company.empleados.Arquitectos;
-import com.company.empleados.Empleados;
 import com.company.empleados.MaestroMayor;
 import com.company.empleados.Obreros;
 import com.company.obras.Comercios;
 import com.company.obras.Domesticas;
 import com.company.obras.Hoteles;
-import com.company.obras.Obras;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
@@ -81,7 +75,7 @@ public class Main {
         System.out.println(unHotel.agregarEmpleado(maestroMayor2));
         System.out.println(unHotel.agregarEmpleado(maestroMayor4));
         System.out.println(unHotel.agregarEmpleado(maestroMayor3));     //este Maestro Mayor no entrara en los Empleados de la Obre, ya hay 3 Maestros Mayores
-        System.out.println(unHotel.agregarEmpleado(obrero2));
+        System.out.println(unHotel.agregarEmpleado(obrero2));   //agregara al obrero, pero avisa que falta al menos un obrero en la obra
         System.out.println(unHotel.agregarEmpleado(obrero3));
         System.out.println(unHotel.agregarEmpleado(obrero5));
 
@@ -104,13 +98,13 @@ public class Main {
         /*2.D  Se solicita agregar las obras (del punto anterior) a la lista de la empresa.*/
 
         System.out.println("\n\tCarga de Obras al Listado de la Empresa");
-        System.out.println(nuevaEmpresa.agregarObra(unaCasa) + "\n"+nuevaEmpresa.agregarObra(unHotel) + "\n" + nuevaEmpresa.agregarObra(unComercio));
+        System.out.println(nuevaEmpresa.agregarObra(unaCasa) + "\n"+ nuevaEmpresa.agregarObra(unHotel) + "\n" + nuevaEmpresa.agregarObra(unComercio));
 
         /*2.E  Crear un método para recorrer los empleados que trabajan en una obra.
         Mostrando por pantalla los distintos datos particulares de cada empleado.*/
 
         System.out.println("\n\tEmpleados de Obra Domestica");
-        StringBuilder empleados = unaCasa.mostrarListadoEmpleados();
+        StringBuilder empleados = unaCasa.mostrarEmpleadosObra();
         System.out.println(empleados);
 
 

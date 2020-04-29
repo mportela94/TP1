@@ -68,23 +68,13 @@ public class Obras extends Empresa {
     }
 
     @Override
-    public void setEmpleadosDeObra(List<Empleados> empleadosDeObra) {
+    public void setEmpleados(List<Empleados> empleadosDeObra) {
         this.empleadosDeObra = empleadosDeObra;
     }
 
     @Override
-    public List<Empleados> getEmpleadosDeObra() {
+    public List<Empleados> getEmpleados() {
         return empleadosDeObra;
-    }
-
-    @Override
-    public void setListadoDeObras(List<Obras> listadoDeObras){
-        this.listadoDeObras=listadoDeObras;
-    }
-
-    @Override
-    public List<Obras> getListadoDeObras (){
-        return listadoDeObras;
     }
 
     @Override
@@ -161,7 +151,7 @@ public class Obras extends Empresa {
     }
 
 
-    public StringBuilder mostrarListadoEmpleados(){
+    public StringBuilder mostrarEmpleadosObra(){
         StringBuilder empleados = new StringBuilder();
         for(int i=0; i<empleadosDeObra.size();i++){
             empleados.append(empleadosDeObra.get(i).toString() + "\n");

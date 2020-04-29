@@ -27,8 +27,6 @@ public class Obreros  extends Empleados implements Construccion{
         return ("Soy obrero y construyo");
     }
 
-
-
     @Override
     public int getCostoPorDia(){
         return 1500;
